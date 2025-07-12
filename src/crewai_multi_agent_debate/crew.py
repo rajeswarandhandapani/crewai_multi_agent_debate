@@ -11,9 +11,16 @@ class CrewaiMultiAgentDebate():
     tasks: List[Task]
 
     @agent
-    def debater(self) -> Agent:
+    def proposer(self) -> Agent:
         return Agent(
-            config=self.agents_config['debater'],
+            config=self.agents_config['proposer'],
+            verbose=True
+        )
+    
+    @agent
+    def opposer(self) -> Agent:
+        return Agent(
+            config=self.agents_config['opposer'],
             verbose=True
         )
 
@@ -28,20 +35,21 @@ class CrewaiMultiAgentDebate():
     def propose(self) -> Task:
         return Task(
             config=self.tasks_config['propose'],
+            output_file='propose.md'
         )
 
     @task
     def oppose(self) -> Task:
         return Task(
             config=self.tasks_config['oppose'],
-            output_file='report.md'
+            output_file='oppose.md'
         )
     
     @task
     def decide(self) -> Task:
         return Task(
             config=self.tasks_config['decide'],
-            output_file='report.md'
+            output_file='decide.md'
         )
 
     @crew
