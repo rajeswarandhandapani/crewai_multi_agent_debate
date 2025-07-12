@@ -43,3 +43,13 @@ This example, unmodified, will run the create a `report.md` file with the output
 
 The crewai-multi-agent-debate Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
+## Supported LLMs
+
+This project demonstrates multi-agent debate using several different Large Language Models (LLMs). Each agent can be configured to use a different LLM, allowing for diverse perspectives and capabilities. The following LLMs are used by default (see `src/crewai_multi_agent_debate/config/agents.yaml`):
+
+- **Anthropic Claude 3.5 Haiku** (`anthropic/claude-3-5-haiku-latest`): Used by the proposer agent to generate arguments in favor of the motion.
+- **OpenAI GPT-4.1 Mini** (`openai/gpt-4.1-mini-2025-04-14`): Used by the opposer agent to generate arguments against the motion.
+- **Google Gemini 2.5 Flash** (`gemini/gemini-2.5-flash`): Used by the judge agent to evaluate arguments and decide the winner.
+
+You can customize which LLM each agent uses by editing the `llm` field in the agents configuration file.
+
