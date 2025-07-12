@@ -1,0 +1,23 @@
+[project]
+name = "crewai_multi_agent_debate"
+version = "0.1.0"
+description = "crewai-multi-agent-debate using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.130.0,<1.0.0"
+]
+
+[project.scripts]
+crewai_multi_agent_debate = "crewai_multi_agent_debate.main:run"
+run_crew = "crewai_multi_agent_debate.main:run"
+train = "crewai_multi_agent_debate.main:train"
+replay = "crewai_multi_agent_debate.main:replay"
+test = "crewai_multi_agent_debate.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
