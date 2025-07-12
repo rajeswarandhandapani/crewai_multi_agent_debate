@@ -13,7 +13,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'motion': 'Spring AI framework is better than native SDKs in July 2025?',
+        'motion': 'Fidelity Go is a good investment',
         'current_year': str(datetime.now().year)
     }
     
