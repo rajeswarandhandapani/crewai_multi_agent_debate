@@ -13,7 +13,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'motion': 'Is CrewAI better AI framework than LangChain?',
+        'motion': 'Spring AI framework is better than native SDKs in July 2025?',
         'current_year': str(datetime.now().year)
     }
     
